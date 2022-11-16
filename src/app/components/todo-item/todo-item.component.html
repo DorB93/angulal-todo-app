@@ -1,0 +1,7 @@
+<div [ngClass]="{reminder: todo.reminder}" class="todo-container" (dblclick)="onToggle(todo)">
+  <h3>{{todo.text}}</h3>
+  <p>{{todo.doDay}}</p>
+  <button class="btn-remove">
+    <fa-icon (click)="onDelete(todo)" [icon]="faTimes"></fa-icon>
+  </button>
+</div>

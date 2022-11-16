@@ -1,0 +1,25 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "text": "Create an Angular todo app",
+      "doDay": "2022-11-22",
+      "createAt": "2022-11-16",
+      "reminder": true
+    },
+    {
+      "id": 2,
+      "text": "Create an server for th todo app",
+      "doDay": "2022-11-22",
+      "createAt": "2022-11-16",
+      "reminder": true
+    },
+    {
+      "id": 3,
+      "text": "Make lunch",
+      "doDay": "2022-11-22",
+      "createAt": "2022-11-16",
+      "reminder": false
+    }
+  ]
+}

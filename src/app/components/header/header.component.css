@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px 0px rgba(126, 126, 126, 0.291);
+}
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.link-route {
+  font-weight: bold;
+  width: 15%;
+}
+a {
+  text-decoration: none;
+}

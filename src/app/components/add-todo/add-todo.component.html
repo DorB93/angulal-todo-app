@@ -1,0 +1,18 @@
+<form class="form-add-todo" (ngSubmit)="onSubmit()">
+  <div class="form-container">
+    <div class="input-container">
+      <label for="text">Todo</label>
+      <input type="text" name="text" id="text" [(ngModel)]="text" placeholder="Add your task">
+    </div>
+    <div class="input-container">
+      <label for="doDay">Do day</label>
+      <input type="date" name="doDay" id="doDay" [(ngModel)]="doDay" placeholder="Add your do Day">
+    </div>
+    <div class="input-container form-container-check">
+      <label for="reminder">Need a reminder?</label>
+      <input type="checkbox" name="reminder" id="reminder" [(ngModel)]="reminder" placeholder="Do you need a reminder?"
+        required>
+    </div>
+    <button type="submit" class="btn-block">Save Task</button>
+  </div>
+</form>
