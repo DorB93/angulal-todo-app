@@ -12,14 +12,14 @@
       "text": "Create an server for th todo app",
       "doDay": "2022-11-22",
       "createAt": "2022-11-16",
-      "reminder": true
+      "reminder": false
     },
     {
-      "id": 3,
       "text": "Make lunch",
-      "doDay": "2022-11-22",
-      "createAt": "2022-11-16",
-      "reminder": false
+      "doDay": "2022-11-24",
+      "reminder": true,
+      "createAt": "17.11.2022",
+      "id": 3
     }
   ]
 }

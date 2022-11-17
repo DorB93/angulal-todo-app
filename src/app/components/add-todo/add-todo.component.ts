@@ -30,21 +30,21 @@ export class AddTodoComponent implements OnInit {
       return;
     }
     if (!this.doDay) {
-      alert('Please add a do day!');
+      alert('Please add a do date!');
       return;
     }
+
     const newTodo: Todo = {
       text: this.text,
       doDay: this.doDay,
       reminder: this.reminder,
       createAt: new Date().toLocaleDateString().toString(),
     };
-    
-    this.onAddTodo.emit(newTodo);
+
+    this.addTodo(newTodo);
 
     this.text = '';
     this.doDay = '';
     this.reminder = false;
   }
-  
 }

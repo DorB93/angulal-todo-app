@@ -12,9 +12,19 @@ nav {
   justify-content: space-around;
   align-items: center;
 }
+nav div {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
 .link-route {
-  font-weight: bold;
-  width: 15%;
+  font-weight: normal;
+}
+.curr-route {
+  background-color: rgba(227, 227, 227, 0.477);
+  font-weight: bolder;
 }
 a {
   text-decoration: none;
