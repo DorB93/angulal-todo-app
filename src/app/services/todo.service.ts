@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class TodoService {
-  private apiUrl = '127.0.0.1:2500/todos';
+  private apiUrl = 'http://localhost:2500/todos';
   constructor(private http: HttpClient) {}
 
   getTodos(): Observable<Todo[]> {
