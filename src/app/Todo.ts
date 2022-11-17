@@ -4,4 +4,5 @@ export interface Todo {
   doDay: string;
   createAt: string;
   reminder: boolean;
+  active: boolean;
 }
