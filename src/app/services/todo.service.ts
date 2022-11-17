@@ -21,12 +21,12 @@ export class TodoService {
   }
 
   deleteTodos(todo: Todo): Observable<Todo> {
-    const url = `${this.apiUrl}/${todo.id}`;
+    const url = `${this.apiUrl}/${todo._id}`;
     return this.http.delete<Todo>(url);
   }
 
   updateTodoReminder(todo: Todo): Observable<Todo> {
-    const url = `${this.apiUrl}/${todo.id}`;
+    const url = `${this.apiUrl}/${todo._id}`;
     return this.http.put<Todo>(url, todo, httpOptions);
   }
   addTodo(todo: Todo): Observable<Todo> {

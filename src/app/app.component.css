@@ -6,6 +6,7 @@
   right: 25%;
   overflow: hidden;
   min-height: 400px;
+  max-height: 700px;
   border: 0.5px groove rgba(176, 177, 177, 0.488);
   padding: 35px;
   padding-top: 0;
