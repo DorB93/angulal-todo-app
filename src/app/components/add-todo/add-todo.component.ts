@@ -12,17 +12,10 @@ export class AddTodoComponent implements OnInit {
   text: string = '';
   doDay: string = '';
   reminder: boolean = false;
-  todos: Todo[] = [];
 
   constructor(private todoService: TodoService) {}
 
-  ngOnInit(): void {
-    this.todoService.getTodos().subscribe((todos) => (this.todos = todos));
-  }
-
-  addTodo(todo: Todo) {
-    this.todoService.addTodo(todo).subscribe((todo) => this.todos.push(todo));
-  }
+  ngOnInit(): void {}
 
   onSubmit(): void {
     if (!this.text) {
@@ -42,7 +35,7 @@ export class AddTodoComponent implements OnInit {
       active: true,
     };
 
-    this.addTodo(newTodo);
+    this.todoService.addTodo(newTodo).subscribe();
 
     this.text = '';
     this.doDay = '';
