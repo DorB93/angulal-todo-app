@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  title: string = 'TDL App';
+  title: string = 'My Tasks';
 
   constructor(private router: Router) {}
 

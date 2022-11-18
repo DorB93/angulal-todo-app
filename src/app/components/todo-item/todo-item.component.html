@@ -1,7 +1,19 @@
-<div [ngClass]="{reminder: todo.reminder}" class="todo-container" (dblclick)="onToggle(todo)">
+<div class="todo-container">
   <h3>{{todo.text}}</h3>
-  <p>Deadline: {{todo.doDay}}</p>
+  <p> {{date}} | {{time}}</p>
+  <button class="reminder-container" (click)="onToggle(todo)" [ngClass]="{ alertReminder: remind }">
+    <div *ngIf="remind; then yesReminder else noReminder" class="reminder-container">
+    </div>
+  </button>
+
   <button class="btn-remove">
-    <fa-icon (click)="onDelete(todo)" [icon]="faTimes"></fa-icon>
+    <fa-icon (click)="onDelete(todo)" [icon]="faTrashAlt"></fa-icon>
   </button>
 </div>
+
+<ng-template #yesReminder>
+  <fa-icon [icon]="faBell"></fa-icon>
+</ng-template>
+<ng-template #noReminder>
+  <fa-icon [icon]="faBellSlash"></fa-icon>
+</ng-template>

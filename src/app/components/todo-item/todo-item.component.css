@@ -1,12 +1,9 @@
 .todo-container {
-  cursor: pointer;
-  background-color: rgba(200, 200, 200, 0.55);
-  margin-bottom: 5px;
   height: 80px;
   padding: 5px;
   padding-left: 20px;
   position: relative;
-  border-radius: 15px;
+  border-bottom: 0.5px solid rgb(85, 85, 85);
 }
 .btn-remove {
   position: absolute;
@@ -23,11 +20,53 @@
   cursor: pointer;
   transition: linear 250ms all;
 }
-.btn-remove:hover {
-  background-color: red;
-  color: white;
-  box-shadow: 2px 1px 3px 3px rgba(98, 98, 98, 0.203);
+
+.reminder-container {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  height: 1rem;
+  width: 1rem;
+  padding: 1.5px;
+  border-radius: 50%;
+  color: gray;
+  cursor: pointer;
 }
-.reminder {
-  border-left: 5px solid rgb(128, 51, 0);
+.alertReminder {
+  animation: bellring 1.5s ease-out 0s infinite normal backwards;
+  color: rgb(43, 37, 242);
+}
+
+@keyframes bellring {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 0;
+  }
+
+  10% {
+    transform: rotate(2deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+
+  80% {
+    transform: rotate(-2deg);
+  }
+
+  90% {
+    transform: rotate(2deg);
+  }
 }

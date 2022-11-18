@@ -31,9 +31,11 @@ export class AddTodoComponent implements OnInit {
       text: this.text,
       doDay: this.doDay,
       reminder: this.reminder,
-      createAt: new Date().toLocaleDateString().toString(),
+      createAt: new Date(),
       active: true,
     };
+
+    console.log(newTodo.doDay);
 
     this.todoService.addTodo(newTodo).subscribe();
 
