@@ -12,6 +12,7 @@ import { TodosComponent } from './components/todos/todos.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { AdoutComponent } from './components/adout/adout.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AdoutComponent } from './components/adout/adout.component';
     TodoItemComponent,
     AddTodoComponent,
     AdoutComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

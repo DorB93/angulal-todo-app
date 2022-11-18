@@ -3,9 +3,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
   box-shadow: 0 4px 10px 0px rgba(126, 126, 126, 0.291);
-  border-radius: 15px;
 }
 nav {
   width: 100%;
@@ -19,7 +17,6 @@ nav div {
   justify-content: center;
   align-items: center;
   height: 50px;
-  border-radius: 15px;
 }
 .link-route {
   font-weight: normal;
@@ -28,6 +25,13 @@ nav div {
   background-color: rgba(227, 227, 227, 0.477);
   font-weight: bolder;
 }
-a {
+
+a:link {
   text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
 }
