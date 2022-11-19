@@ -41,7 +41,6 @@ export class TodoItemComponent implements OnInit {
     const today = new Date().toLocaleDateString();
     const [tDay, tMonth, tYear] = today.split('.');
     const [year, month, day] = date.split('-');
-    console.log({ date }, { today });
 
     if (tYear === year && tMonth === month) {
       if (tDay === day) {
