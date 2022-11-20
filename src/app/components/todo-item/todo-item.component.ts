@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Todo } from 'src/app/Todo';
 import {
+  faPencilAlt,
   faTrashAlt,
   faBell,
   faBellSlash,
@@ -15,13 +16,17 @@ export class TodoItemComponent implements OnInit {
   @Input()
   todo!: Todo;
   @Output() onDeleteTodo: EventEmitter<Todo> = new EventEmitter();
-  @Output() onToggleReminderTodo: EventEmitter<Todo> = new EventEmitter();
+  @Output() onToggleTodo: EventEmitter<Todo> = new EventEmitter();
+  @Output() onSelectEdit: EventEmitter<Todo> = new EventEmitter();
+
   faTrashAlt = faTrashAlt;
+  faPencilAlt = faPencilAlt;
   faBell = faBell;
   faBellSlash = faBellSlash;
   remind = false;
   date = '';
   time = '';
+
   constructor() {}
 
   ngOnInit(): void {
@@ -30,11 +35,14 @@ export class TodoItemComponent implements OnInit {
     this.time = this.todo.doDay.split('T')[1];
     this.genrateDoDaydisplay(this.date);
   }
+  toEdit(todo: Todo): void {
+    this.onSelectEdit.emit(todo);
+  }
   onDelete(todo: Todo): void {
     this.onDeleteTodo.emit(todo);
   }
   onToggle(todo: Todo): void {
-    this.onToggleReminderTodo.emit(todo);
+    this.onToggleTodo.emit(todo);
     this.remind = this.todo.reminder;
   }
   genrateDoDaydisplay(date: string) {

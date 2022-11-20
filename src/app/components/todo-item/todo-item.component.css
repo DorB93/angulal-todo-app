@@ -20,7 +20,17 @@
   cursor: pointer;
   transition: linear 250ms all;
 }
-
+.edit-controll {
+  position: absolute;
+  bottom: 5px;
+  right: 30px;
+  height: 1rem;
+  width: 1rem;
+  padding: 1.5px;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+}
 .reminder-container {
   border: 0;
   background-color: transparent;
@@ -37,6 +47,15 @@
 .alertReminder {
   animation: bellring 1.5s ease-out 0s infinite normal backwards;
   color: rgb(43, 37, 242);
+}
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
 }
 
 @keyframes bellring {

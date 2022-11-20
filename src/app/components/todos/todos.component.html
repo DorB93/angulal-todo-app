@@ -1,6 +1,8 @@
 <div class="todos-container">
+
   <app-todo-item *ngFor=" let todo of todos" [todo]="todo" (onDeleteTodo)="deleteTodo(todo)"
-    (onToggleReminderTodo)="toggleReminder(todo)">
+    (onToggleTodo)="toggleReminder(todo)" (onSelectEdit)="selectEdit(todo)">
   </app-todo-item>
+
 
 </div>

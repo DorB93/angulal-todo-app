@@ -9,6 +9,7 @@ import { Todo } from 'src/app/Todo';
 })
 export class TodosComponent implements OnInit {
   todos: Todo[] = [];
+  selectedTodo?: Todo;
   constructor(private todoService: TodoService) {}
 
   ngOnInit(): void {
@@ -23,6 +24,14 @@ export class TodosComponent implements OnInit {
 
   toggleReminder(todo: Todo) {
     todo.reminder = !todo.reminder;
-    this.todoService.updateTodoReminder(todo).subscribe();
+    this.todoService.updateTodo(todo).subscribe();
+  }
+
+  selectEdit(todo: Todo): void {
+    if (this.selectedTodo === todo) {
+      this.selectedTodo = undefined;
+    } else {
+      this.selectedTodo = todo;
+    }
   }
 }

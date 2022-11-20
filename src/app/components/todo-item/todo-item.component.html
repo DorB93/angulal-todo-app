@@ -5,7 +5,11 @@
     <div *ngIf="remind; then yesReminder else noReminder" class="reminder-container">
     </div>
   </button>
-
+  <button class="edit-controll">
+    <a routerLink="/detail/{{todo._id}}">
+      <fa-icon [icon]="faPencilAlt"></fa-icon>
+    </a>
+  </button>
   <button class="btn-remove">
     <fa-icon (click)="onDelete(todo)" [icon]="faTrashAlt"></fa-icon>
   </button>

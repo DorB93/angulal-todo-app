@@ -1,0 +1,22 @@
+<div *ngIf="todo" class="task-detail">
+  <div class="detail-container">
+    <h2>{{todo.text | uppercase}} Details</h2>
+    <div class="input-container">
+      <label for="text">Task:</label>
+      <input type="text" name="text" id="text" [(ngModel)]="todo.text" placeholder="Add your task">
+    </div>
+    <div class="input-container">
+      <label for="doDay">Deadline:</label>
+      <input type="datetime-local" name="doDay" id="doDay" [(ngModel)]="todo.doDay" placeholder="Add your do Day">
+    </div>
+    <div class="input-container form-container-check">
+      <label for="reminder">Need a reminder?</label>
+      <input type="checkbox" name="reminder" id="reminder" [(ngModel)]="todo.reminder"
+        placeholder="Do you need a reminder?" required>
+    </div>
+    <div class="btn-container">
+      <button type="button" (click)="goBack()">go back</button>
+      <button type="button" (click)="save()">save</button>
+    </div>
+  </div>
+</div>
