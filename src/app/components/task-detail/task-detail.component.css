@@ -6,6 +6,8 @@
   align-items: center;
 }
 .detail-container {
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px 3px gainsboro;
   display: flex;
   width: 60%;
   flex-direction: column;
@@ -51,5 +53,6 @@
 .btn-container button:hover {
   background-color: black;
   color: white;
-  box-shadow: inset 0px 0px 5px 3px white;
+  box-shadow: 2px 2px 5px 3px rgb(134, 134, 134);
+  transform: translate(1.4);
 }

@@ -15,7 +15,7 @@
 }
 .route-container {
   padding: 10px;
-  background-color: rgb(237, 237, 237);
+  background-color: rgba(237, 237, 237, 0.226);
   overflow: auto;
 }
 .route-container::-webkit-scrollbar {

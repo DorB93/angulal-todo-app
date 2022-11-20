@@ -1,13 +1,20 @@
 .form-add-todo {
+  height: 100%;
   margin-bottom: 10px;
-  background-color: rgba(205, 253, 255, 0.413);
-  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
 }
 .form-container {
+  border-radius: 12px;
+  width: 80%;
+  padding: 10px;
+  background-color: rgba(204, 204, 204, 0.413);
   margin: 20px 0;
   display: flex;
   flex-direction: column;
+  box-shadow: 3px 3px 5px 3px gainsboro;
 }
 .input-container {
   display: flex;
@@ -42,9 +49,11 @@
   height: 25px;
 }
 .form-container button {
+  width: 100px;
   height: 30px;
   background-color: aquamarine;
   border: 0;
+  align-self: center;
   border-radius: 10px;
   transition: 300ms all linear;
 }

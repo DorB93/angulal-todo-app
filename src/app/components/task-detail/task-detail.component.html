@@ -1,6 +1,6 @@
 <div *ngIf="todo" class="task-detail">
   <div class="detail-container">
-    <h2>{{todo.text | uppercase}} Details</h2>
+    <h2>Edit {{todo.text | uppercase}} Details</h2>
     <div class="input-container">
       <label for="text">Task:</label>
       <input type="text" name="text" id="text" [(ngModel)]="todo.text" placeholder="Add your task">
@@ -15,8 +15,8 @@
         placeholder="Do you need a reminder?" required>
     </div>
     <div class="btn-container">
-      <button type="button" (click)="goBack()">go back</button>
-      <button type="button" (click)="save()">save</button>
+      <button type="button" (click)="goBack()">Back</button>
+      <button type="button" (click)="save()">Save</button>
     </div>
   </div>
 </div>

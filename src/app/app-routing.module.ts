@@ -9,6 +9,11 @@ import { TaskDetailComponent } from './components/task-detail/task-detail.compon
 const routes: Routes = [
   {
     path: '',
+    redirectTo: '/todos',
+    pathMatch: 'full',
+  },
+  {
+    path: 'todos',
     component: TodosComponent,
   },
   {
